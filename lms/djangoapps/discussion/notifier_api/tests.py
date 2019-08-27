@@ -236,7 +236,7 @@ class NotifierUsersViewSetTest(UrlResetMixin, ModuleStoreTestCase):
 
         num_pages = (num_users - 1) / page_size + 1
         result_list = []
-        for i in range(1, num_pages + 1):
+        for i in range(1, int(num_pages + 1)):
             result_list.extend(self._get_list(page=i, page_size=page_size))
         result_map = {result["id"]: result for result in result_list}
 
