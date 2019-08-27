@@ -1369,7 +1369,7 @@ class TestExecutiveSummaryReport(TestReportMixin, InstructorTaskCourseTestCase):
         with report_store.storage.open(report_path) as html_file:
             html_file_data = html_file.read()
             for data in expected_data:
-                self.assertIn(data, html_file_data)
+                self.assertIn(data, html_file_data.decode('utf-8'))
 
 
 @ddt.ddt
