@@ -185,7 +185,7 @@ class VisibleBlocksTest(GradesModelTestCase):
         self.assertNotEqual(stored_vblocks.hashed, repeat_vblocks.hashed)
 
         self.assertEqual(stored_vblocks.pk, same_order_vblocks.pk)
-        self.assertEqual(stored_vblocks.hashed, same_order_vblocks.hashed)
+        self.assertEqual(stored_vblocks.hashed.decode('utf-8'), same_order_vblocks.hashed)
 
         self.assertNotEqual(stored_vblocks.pk, new_vblocks.pk)
         self.assertNotEqual(stored_vblocks.hashed, new_vblocks.hashed)
