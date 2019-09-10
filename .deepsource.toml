@@ -5,7 +5,19 @@ test_patterns = [
 ]
 
 exclude_patterns = [
-  
+    '.github/**',
+    '.tx/**',
+    'docs/**',
+    'screenshots/**',
+    'static/**',
+    'themes/**',
+    'vendor_extra/**',
+    '.annotation_safe_list.yaml',
+    '.babelrc',
+    '.eslintignore',
+    '.eslintrc.json',
+    '.npmignore',
+    '.npmrc'
 ]
 
 [[analyzers]]
